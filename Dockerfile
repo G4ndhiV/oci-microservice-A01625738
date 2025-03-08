@@ -4,18 +4,12 @@ FROM openjdk:17-jdk-slim
 # Definir el directorio de trabajo dentro del contenedor
 WORKDIR /oci-microservice-A01625738
 
-# Copiar el archivo JAR generado en target/
-# Aseguramos copiar el archivo específico en vez de *.jar
-COPY target/oci-microservice-A01625738.jar oci-microservice-A01625738.jar
-
-# Crear la carpeta Wallet_javadev101 dentro del contenedor (por si no se copia correctamente)
-RUN mkdir -p /oci-microservice-A01625738/Wallet_javadev101
+# Copiar el archivo JAR desde target/
+# Se usa `*.jar` para copiar cualquier versión generada
+COPY target/*.jar oci-microservice.jar
 
 # Copiar la carpeta Wallet_javadev101 si existe
 COPY src/main/resources/Wallet_javadev101 /oci-microservice-A01625738/Wallet_javadev101
-
-# Copiar directamente `tnsnames.ora` si la carpeta no se copia correctamente
-COPY src/main/resources/Wallet_javadev101/tnsnames.ora /oci-microservice-A01625738/Wallet_javadev101/tnsnames.ora
 
 # Definir la variable de entorno TNS_ADMIN para Oracle Wallet
 ENV TNS_ADMIN=/oci-microservice-A01625738/Wallet_javadev101
@@ -24,4 +18,4 @@ ENV TNS_ADMIN=/oci-microservice-A01625738/Wallet_javadev101
 EXPOSE 8080
 
 # Comando de inicio del contenedor
-ENTRYPOINT ["java", "-jar", "oci-microservice-A01625738.jar"]
+ENTRYPOINT ["java", "-jar", "oci-microservice.jar"]
