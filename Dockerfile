@@ -14,8 +14,11 @@ COPY src/main/resources/Wallet_javadev101 /oci-microservice-A01625738/Wallet_jav
 # Definir la variable de entorno TNS_ADMIN para Oracle Wallet
 ENV TNS_ADMIN=/oci-microservice-A01625738/Wallet_javadev101
 
+# Variable de entorno para el puerto de la base de datos
+ENV DATABASE_PORT=1521
+
 # Exponer el puerto 8080 para que el servicio sea accesible
-EXPOSE 8081
+EXPOSE 8080
 
 # Comando de inicio del contenedor
 ENTRYPOINT ["java", "-jar", "oci-microservice.jar"]
