@@ -1,0 +1,9 @@
+/Users/gandhivaldez/Desktop/oci-microservice-master/src/main/java/com/example/oci_microservice/OciMicroserviceApplication.java
+/Users/gandhivaldez/Desktop/oci-microservice-master/src/main/java/com/example/oci_microservice/controller/OrderController.java
+/Users/gandhivaldez/Desktop/oci-microservice-master/src/main/java/com/example/oci_microservice/controller/UserController.java
+/Users/gandhivaldez/Desktop/oci-microservice-master/src/main/java/com/example/oci_microservice/model/Order.java
+/Users/gandhivaldez/Desktop/oci-microservice-master/src/main/java/com/example/oci_microservice/model/User.java
+/Users/gandhivaldez/Desktop/oci-microservice-master/src/main/java/com/example/oci_microservice/repository/OrderRepository.java
+/Users/gandhivaldez/Desktop/oci-microservice-master/src/main/java/com/example/oci_microservice/repository/UserRepository.java
+/Users/gandhivaldez/Desktop/oci-microservice-master/src/main/java/com/example/oci_microservice/service/OrderService.java
+/Users/gandhivaldez/Desktop/oci-microservice-master/src/main/java/com/example/oci_microservice/service/UserService.java
